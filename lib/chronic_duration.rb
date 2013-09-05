@@ -22,7 +22,7 @@ module ChronicDuration
   # second are input)
   def parse(string, opts = {})
     result = calculate_from_words(cleanup(string), opts)
-    (!opts[:keep_zero] and result == 0) ? nil : result
+    (!opts[:keep_zero] and result == 0) ? result : result
   end
 
   # Given an integer and an optional format,
